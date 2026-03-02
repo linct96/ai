@@ -1,13 +1,7 @@
 ---
 name: playwright-browser
-description: >-
-  Playwright CLI and MCP tools for headless browser automation, E2E testing,
-  screenshots, and web scraping. Use for CI-safe browser operations.
-license: MIT
-metadata:
-  author: NodeJS-Starter-V1
-  version: '1.0.0'
-  locale: en-AU
+description:
+  Playwright CLI and MCP tools for headless browser automation, E2E testing,screenshots, and web scraping. Use for CI-safe browser operations.
 ---
 
 # Playwright Browser Automation

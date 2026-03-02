@@ -1,41 +1,50 @@
 ---
-name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+name: init-project
+description: Guidance for initializing new projects. Use framework/package manager commands instead of manual scaffolding.
 ---
 
-This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+# Project Initialization Best Practices
 
-The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+When creating new projects, **always prefer official CLI tools and scaffolding commands** over manually creating files and directories. These tools:
 
-## Design Thinking
+- Set up correct project structure and config
+- Install dependencies with compatible versions
+- Configure build tools, linting, testing
+- Follow framework best practices
 
-Before coding, understand the context and commit to a BOLD aesthetic direction:
-- **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+## JavaScript/TypeScript
 
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+| Framework | Command |
+|-----------|---------|
+| Vite | `bun create vite` or `npm create vite@latest` |
+| Next.js | `bunx create-next-app` or `npx create-next-app@latest` |
+| Remix | `bunx create-remix` or `npx create-remix@latest` |
+| Astro | `bun create astro` or `npm create astro@latest` |
+| SvelteKit | `bun create svelte` or `npm create svelte@latest` |
+| Nuxt | `bunx nuxi init` or `npx nuxi@latest init` |
+| React Native | `npx @react-native-community/cli init` |
+| Expo | `bunx create-expo-app` or `npx create-expo-app` |
+| Electron | `npm init electron-app@latest` |
+| Tauri | `bun create tauri-app` or `npm create tauri-app@latest` |
 
-Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
-- Production-grade and functional
-- Visually striking and memorable
-- Cohesive with a clear aesthetic point-of-view
-- Meticulously refined in every detail
 
-## Frontend Aesthetics Guidelines
+### TypeScript Package Preference
 
-Focus on:
-- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
-- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
-- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
-- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.
+- Prefer `pnpm` as the package manager for TypeScript packages/libraries.
 
-NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+## Key Principles
 
-**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+1. **Don't manually create config files** - Let the CLI generate them
+2. **Use interactive prompts** - Most CLIs ask about TypeScript, linting, testing
+3. **Check framework docs** - Commands change; verify current syntax
+4. **Prefer package-manager conventions** - use `pnpm` for TypeScript packages unless project constraints require otherwise
+5. **Use templates** - Many CLIs offer starter templates (e.g., `--template react-ts`)
 
-Remember: You are capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+
+## When Manual Setup is OK
+
+- Adding to existing monorepo with specific conventions
+- Learning how tools work under the hood
+- Very minimal projects (single script)
+- Custom build requirements not covered by templates
